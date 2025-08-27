@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria Pública de Fotos — Demo Local</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📸 Galeria Pública (Demo Local)</h1>
+      <div class="actions">
+        <a class="btn" id="exportJson" download="galeria-backup.json">Exportar backup</a>
+        <label class="btn" for="importJson">Importar backup</label>
+        <input id="importJson" type="file" accept="application/json" />
+      </div>
+    </header>
+
+    <section id="uploader" class="uploader" aria-label="Área de envio de fotos" tabindex="0">
+      <div>
+        <h2>Solte imagens aqui ou escolha arquivos</h2>
+        <p>Arraste e solte JPG, PNG, GIF, WEBP… ou clique para selecionar.</p>
+        <div class="row">
+          <label class="file" for="fileInput">Escolher arquivos</label>
+          <button class="primary" id="clearAll" title="Apagar tudo">Limpar galeria</button>
+        </div>
+      </div>
+      <input id="fileInput" type="file" accept="image/*" multiple />
+    </section>
+
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="Pesquisar por nome…" />
+      <span class="muted" id="count">0 itens</span>
+    </div>
+
+    <section id="gallery" class="grid" aria-live="polite"></section>
+    <div id="emptyState" class="empty" hidden>Nenhuma foto ainda. Envie algumas usando a área acima. 🙂</div>
+
+    <footer>
+      <p><strong>Importante:</strong> Esta demo salva as fotos <em>apenas no seu navegador</em> usando IndexedDB. Para que várias pessoas vejam a mesma galeria, publique com um backend (ex.: Firebase, Supabase, Node/Express) ou em um bucket público.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
