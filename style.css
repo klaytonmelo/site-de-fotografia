@@ -1,6 +1,6 @@
 :root{
 --bg:#0f1115;
---panel:#151924;
+--panel:#151924b0;
 --muted:#a6adbb;
 --text:#e6e7ea;
 --accent:#5b9dfc;
@@ -12,7 +12,7 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{margin:0;
-    background:linear-gradient(180deg,#0e1117 0%,#0c1016 100%);
+    background:linear-gradient(180deg,#184bb1 0%,#0c1016 100%);
     color:var(--text);
     font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial
 }
@@ -48,15 +48,15 @@ button:hover,.btn:hover{transform:translateY(-1px);
     opacity:.95
 }
 .primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    color:#0b1220;
+    color:#204ca5;
     font-weight:600}
-.danger{background:linear-gradient(135deg,#f87171,#fb7185);
-    color:#1b0b0f;
+.danger{background:linear-gradient(135deg,#ff0303,#fb7185);
+    color:#2c2929;
     font-weight:600
 }
 
 .uploader{
-    border:2px dashed #2a3244;
+    border:2px dashed #0b3fb8;
     border-radius:var(--radius);
     padding:26px;
     display:grid;
@@ -81,11 +81,12 @@ button:hover,.btn:hover{transform:translateY(-1px);
     justify-content:center
 }
 input[type="file"]{display:none}
-label.file{padding:10px 14px;
-    background:#1b2232;
+label.file{
+    padding:5px 14px;
+    background:#0b5dd821;
     border-radius:10px;
     cursor:pointer;
-    box-shadow:var(--shadow)
+    box-shadow: 0px 0px 6px rgb(220, 220, 233)
 }
 
 .toolbar{margin:14px 0 6px;
@@ -93,9 +94,10 @@ label.file{padding:10px 14px;
     align-items:center;
     flex-wrap:wrap
 }
-.search{flex:1;
+.search{
+    flex:1;
     min-width:200px;
-    background:#111523;
+    background:#1b1b1b67;
     border:1px solid #24314b;
     border-radius:12px;
     padding:10px 12px;
@@ -103,7 +105,8 @@ label.file{padding:10px 14px;
 
 .grid{display:grid;
     grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-    gap:14px;margin-top:12px
+    gap:14px;
+    margin-top:12px
 }
 .card{background:linear-gradient(180deg,#141a27,#111623);
     border:1px solid #232b3d;
