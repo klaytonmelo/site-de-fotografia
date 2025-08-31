@@ -10,12 +10,12 @@
 --shadow:0 10px 30px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
-html,body{height:100%,}
-body{margin:0;;
+html,body{height:auto}
+body{margin:0;
     background:linear-gradient(180deg,#184bb1 0%,#0c1016 100%);
     height: auto;
     color:var(--text);
-    font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial
+    font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
     
 }
 .container{max-width:1100px;
@@ -118,7 +118,7 @@ label.file{
     border:1px solid #232b3d;
     border-radius:18px;
     overflow:hidden;
-    box-shadow:7px 7px 5px ;
+    box-shadow:7px 7px 5px white;
     display:flex;
     flex-direction:column
 }

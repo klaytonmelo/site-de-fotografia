@@ -124,7 +124,6 @@
   ['dragenter','dragover'].forEach(ev=> dom.uploader.addEventListener(ev, e=>{ e.preventDefault(); dom.uploader.classList.add('dragover'); }));
   ;['dragleave','drop'].forEach(ev=> dom.uploader.addEventListener(ev, e=>{ e.preventDefault(); dom.uploader.classList.remove('dragover'); }));
   dom.uploader.addEventListener('drop', e=> handleFiles(e.dataTransfer.files));
-  dom.uploader.addEventListener('click', ()=> dom.input.click());
   dom.input.addEventListener('change', e=> handleFiles(e.target.files));
 
   // Search
